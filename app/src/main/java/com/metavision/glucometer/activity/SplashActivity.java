@@ -43,7 +43,7 @@ public class SplashActivity extends AppCompatActivity {
     public void activateBluetooth() {
         BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if (mBluetoothAdapter == null){
-            Toast.makeText(getApplicationContext(), "You don\'t have bluetooth device inside your smartphone.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Sorry, you don\'t have bluetooth.", Toast.LENGTH_SHORT).show();
         } else if (!mBluetoothAdapter.isEnabled()){
             mBluetoothAdapter.enable();
             finish();
