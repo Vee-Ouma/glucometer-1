@@ -32,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     @InjectView(R.id.input_fullname) EditText _fullnameText;
     @InjectView(R.id.input_weight) EditText _weightNumber;
     @InjectView(R.id.input_height) EditText _heightNumber;
+    @InjectView(R.id.input_pie) EditText _pieNumber;
     @InjectView(R.id.btn_create_account) Button _createButton;
     @InjectView(R.id.link_already) TextView _alreadySignup;
 
@@ -76,8 +77,9 @@ public class RegisterActivity extends AppCompatActivity {
             realmObjectGluco.setPassword(_passwordText.getText().toString());
             realmObjectGluco.setConfirmPassword(_confirmPassword.getText().toString());
             realmObjectGluco.setFullname(_fullnameText.getText().toString());
-            realmObjectGluco.setWeight(Integer.parseInt(_weightNumber.getText().toString()));
-            realmObjectGluco.setHeight(Integer.parseInt(_heightNumber.getText().toString()));
+            realmObjectGluco.setWeight(_weightNumber.getText().toString());
+            realmObjectGluco.setHeight(_heightNumber.getText().toString());
+            realmObjectGluco.setPie(_pieNumber.getText().toString());
 
 
             realm.commitTransaction();
@@ -117,8 +119,9 @@ public class RegisterActivity extends AppCompatActivity {
         String username = _usernameText.getText().toString();
         String password = _passwordText.getText().toString();
         String fullname = _fullnameText.getText().toString();
-        Integer weight = Integer.parseInt(_weightNumber.getText().toString());
-        Integer height = Integer.parseInt(_heightNumber.getText().toString());
+        String weight = _weightNumber.getText().toString();
+        String height = _heightNumber.getText().toString();
+        String pie =  _pieNumber.getText().toString();
 
         new android.os.Handler().postDelayed(
                 new Runnable() {
@@ -151,8 +154,9 @@ public class RegisterActivity extends AppCompatActivity {
         String password = _passwordText.getText().toString();
         String confirm_password = _confirmPassword.getText().toString();
         String fullname = _fullnameText.getText().toString();
-        Integer weight = Integer.parseInt(_weightNumber.getText().toString());
-        Integer height = Integer.parseInt(_heightNumber.getText().toString());
+        String weight = _weightNumber.getText().toString();
+        String height = _heightNumber.getText().toString();
+        String pie =  _pieNumber.getText().toString();
 
         //        Check username
         if (username.isEmpty() || username.length() < 7) {
@@ -187,7 +191,7 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
 //        Check weight
-        if (weight == null) {
+        if (weight.isEmpty() || weight.trim().length() > 0) {
             _weightNumber.setError("Fill the blank one");
             valid = false;
         }  else {
@@ -195,11 +199,19 @@ public class RegisterActivity extends AppCompatActivity {
         }
 
 //        Check height
-        if (height == null) {
+        if (height.isEmpty() || height.trim().length() > 0) {
             _heightNumber.setError("Fill the blank one");
             valid = false;
         } else {
             _heightNumber.setError(null);
+        }
+
+//        Check pie
+        if (pie.isEmpty() || pie.trim().length() > 0) {
+            _pieNumber.setError("Fill the blank one");
+            valid = false;
+        } else {
+            _pieNumber.setError(null);
         }
 
         return valid;

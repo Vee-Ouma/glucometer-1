@@ -8,7 +8,7 @@ import io.realm.annotations.PrimaryKey;
  */
 
 public class RealmObjectGluco extends RealmObject {
-    private String ConfirmPassword, Fullname, Weight, Height;
+    private String ConfirmPassword, Fullname, Weight, Height, Pie;
     @PrimaryKey
     private String Username;
     private String Password;
@@ -59,5 +59,13 @@ public class RealmObjectGluco extends RealmObject {
 
     public void setHeight(String height) {
         this.Height = height;
+    }
+
+    public String getPie() {
+        return Pie;
+    }
+
+    public void setPie(String pie) {
+        this.Pie = pie;
     }
 }
