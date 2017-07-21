@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/black">
+    <item
+        android:id="@+id/navigation_user"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+        android:title="@string/title_user"
+        android:color="@color/colorPrimary"
+        />
+
+    <item
+        android:id="@+id/navigation_glucometer"
+        android:icon="@drawable/ic_glucometer_black_24dp"
+        android:title="@string/title_glucometer"
+        android:color="@color/dot_orange_screen4"
+        />
+
+    <item
+        android:id="@+id/navigation_statistics"
+        android:icon="@drawable/ic_statistics_black_24dp"
+        android:title="@string/title_statistics"
+        android:color="@color/dot_light_blue_screen4"
+        />
+
+    <item
+        android:id="@+id/navigation_about"
+        android:icon="@drawable/ic_about_black_24dp"
+        android:title="@string/title_about"
+        android:color="@color/dot_light_blue_screen4"
+        />
+</menu>
