@@ -90,6 +90,18 @@ public class LoginActivity extends AppCompatActivity{
         String username = _usernameText.getText().toString();
         String password = _passwordText.getText().toString();
 
+        /*RealmResults<RealmObjectGluco> realmObjectGlucos = realm.where(RealmObjectGluco.class).findAll();
+        for (RealmObjectGluco realmObjectGluco : realmObjectGlucos) {
+            if (username.equals(realmObjectGluco.getUsername()) && password.equals(realmObjectGluco.getPassword())) {
+                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Toast.makeText(getBaseContext(), "Username or password did not match.", Toast.LENGTH_LONG).show();
+                _loginButton.setEnabled(true);
+            }
+        }*/
+
 //        Check authentication
         new android.os.Handler().postDelayed(
                 new Runnable() {
@@ -117,7 +129,8 @@ public class LoginActivity extends AppCompatActivity{
     }
 
     public void onLoginSuccess(){
-        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+        Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+        startActivity(intent);
         finish();
         _loginButton.setEnabled(true);
     }
@@ -157,16 +170,6 @@ public class LoginActivity extends AppCompatActivity{
             valid = false;
         } else {
             _passwordText.setError(null);
-        }
-
-        RealmResults<RealmObjectGluco> realmObjectGlucos = realm.where(RealmObjectGluco.class).findAll();
-        for (RealmObjectGluco realmObjectGluco : realmObjectGlucos) {
-            if (username.equals(realmObjectGluco.getUsername()) && password.equals(realmObjectGluco.getPassword())) {
-                onLoginSuccess();
-            } else {
-                Toast.makeText(getBaseContext(), "Username or password did not match.", Toast.LENGTH_LONG).show();
-                _loginButton.setEnabled(true);
-            }
         }
 
         return valid;
