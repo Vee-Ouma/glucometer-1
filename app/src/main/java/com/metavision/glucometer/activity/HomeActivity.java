@@ -1,5 +1,6 @@
 package com.metavision.glucometer.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
@@ -7,6 +8,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.TextView;
 
 import com.metavision.glucometer.R;
@@ -68,6 +70,21 @@ public class HomeActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /*bottomBar.setOnScrollChangeListener(new View.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(View v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if ( == R.id.navigation_user) {
+                    mTextMessage.setText(R.string.title_user);
+                } else if (tabId == R.id.navigation_glucometer) {
+                    mTextMessage.setText(R.string.title_glucometer);
+                } else if (tabId ==  R.id.navigation_statistics) {
+                    mTextMessage.setText(R.string.title_statistics);
+                } else if (tabId == R.id.navigation_about) {
+                    mTextMessage.setText(R.string.title_about);
+                }
+            }
+        });*/
         /*navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

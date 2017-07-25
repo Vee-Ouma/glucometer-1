@@ -19,6 +19,9 @@
     <color name="dot_light_blue_screen3">#00B0FF</color>
     <color name="dot_light_blue_screen4">#0091EA</color>
 
+    <color name="icon_inactive">#9E9E9E</color>
+    <color name="icon_active">#FAFAFA</color>
+
     <color name="bar_inactive_screen1">#FF8A80</color>
     <color name="bar_inactive_screen2">#B9F6CA</color>
     <color name="bar_inactive_screen3">#FFFF8D</color>

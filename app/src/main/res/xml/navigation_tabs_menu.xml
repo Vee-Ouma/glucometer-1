@@ -4,31 +4,31 @@
             id="@+id/navigation_user"
             icon="@drawable/ic_account_circle_black_24dp"
             title="@string/title_user"
-            color="@color/bar_active_screen1"
-            inActiveColor="@color/bar_inactive_screen1"
-            barColorWhenSelected="@color/bar_inactive_screen1"/>
+            activeColor="@color/icon_active"
+            inActiveColor="@color/icon_inactive"
+            barColorWhenSelected="@color/screen4"/>
 
         <tab
             id="@+id/navigation_glucometer"
             icon="@drawable/ic_glucometer_black_24dp"
             title="@string/title_glucometer"
-            activeColor="@color/bar_active_screen2"
-            inActiveColor="@color/bar_inactive_screen2"
-            barColorWhenSelected="@color/bar_inactive_screen2"/>
+            activeColor="@color/icon_active"
+            inActiveColor="@color/icon_inactive"
+            barColorWhenSelected="@color/screen3"/>
 
         <tab
             id="@+id/navigation_statistics"
             icon="@drawable/ic_statistics_black_24dp"
             title="@string/title_statistics"
-            activeColor="@color/bar_active_screen3"
-            inActiveColor="@color/bar_inactive_screen3"
-            barColorWhenSelected="@color/bar_inactive_screen3"/>
+            activeColor="@color/icon_active"
+            inActiveColor="@color/icon_inactive"
+            barColorWhenSelected="@color/screen2"/>
 
         <tab
             id="@+id/navigation_about"
             icon="@drawable/ic_about_black_24dp"
             title="@string/title_about"
-            activeColor="@color/bar_active_screen4"
-            inActiveColor="@color/bar_inactive_screen4"
-            barColorWhenSelected="@color/bar_inactive_screen4"/>
+            activeColor="@color/icon_active"
+            inActiveColor="@color/icon_inactive"
+            barColorWhenSelected="@color/screen1"/>
     </tabs>
